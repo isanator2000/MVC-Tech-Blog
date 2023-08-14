@@ -49,7 +49,7 @@ sequelize,
 timestamps: false,
 freezeTableName: true,
 underscored: true,
-modelName: 'user'
+modelName: 'User'
 });
 
 module.exports = User;
