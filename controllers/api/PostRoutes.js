@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {User, Post, Comment } = require('../../models');
 const ensureAuth = require('../../utils/auth');
 
-router.post('/', ensureAuthAuth, async (req, res) => {
+router.post('/', ensureAuth, async (req, res) => {
 try {
     const newPost = await Post.create({ ...req.body, userId: req.session.userId });
     console.log("This is the newest post", newPost);
@@ -12,7 +12,7 @@ try {
 }
 });
 
-router.put('/:id', ensureAuthAuth, async (req, res) => {
+router.put('/:id', ensureAuth, async (req, res) => {
 try {
     const updatedPost = await Post.update(
     {
