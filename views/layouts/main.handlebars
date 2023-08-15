@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC Tech Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+
+<body class="has-background-white-ter">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/"><span class="icon"><i class="bi bi-house"></i></span>Home</a>
+                    <a class="navbar-item" href="/dashboard"><span class="icon"><i class="bi bi-card-list"></i></span>Dashboard</a>
+                    {{#if loggedIn}}
+                        <a class="navbar-item" href="/login" id="logout"><span class="icon"><i class="bi bi-box-arrow-right"></i></span>Log out</a>
+                    {{else}}
+                        <a class="navbar-item" href="/login"><span class="icon"><i class="bi bi-box-arrow-in-right"></i></span>Login</a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="section has-text-centered">
+        <div class="container">
+            <h1 class="title is-size-1" id="header">Welcome to my MVC Tech Blog</h1>
+        </div>
+    </header>
+
+    <main>
+        {{{body}}}
+    </main>
+
+    <script src="/js/logout.js"></script>
+</body>
+</html>
