@@ -1,0 +1,28 @@
+{{#if posts.length}}
+<section class="section">
+    <div class="columns is-vcentered">
+        <div class="column">
+            <h2 class="subtitle">Hello, {{username}}!</h2>
+            <p>Click on the post title to edit it.</p>
+        </div>
+    </div>
+    <br>
+    {{#each posts as |post|}}
+    <input type="hidden" name="post-id" value="{{post.id}}"/>
+    <div class="card">
+        <header class="card-header">
+            <h4 class="card-header-title"><a class="has-text-link" href="/dashboard/edit/{{id}}">{{title}}</a></h4>
+        </header>
+        <div class="card-content">
+        <!-- Content of the card -->
+        </div>
+        <footer class="card-footer">
+            <button class="button is-danger" id="del-post-btn"><i class="bi bi-trash"></i>Delete Post</button>
+        </footer>
+    </div>
+    {{/each}}
+</section>
+{{/if}}
+<button type="submit" class="button"><a href="/dashboard/new"><i class="bi bi-plus-square"></i>Add New Post</a></button>
+
+<script src="js/deletepost.js"></script>
