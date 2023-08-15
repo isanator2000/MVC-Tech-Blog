@@ -1,0 +1,33 @@
+<div class="card">
+    <h2 class="card-header-title has-text-centered">Enter username and password to log in</h2>
+    <form id="login-form" class="card-content">
+        <div class="field">
+            <label for="username" class="label">Username</label>
+            <div class="control">
+                <input placeholder="Enter username" type="username" class="input" id="username-login">
+            </div>
+            <p class="help is-small" id="usernameHelp">Your info is safe with us, your email won't be public.</p>
+        </div>
+
+        <div class="field">
+            <label for="password" class="label">Password</label>
+            <div class="control">
+                <input placeholder="Enter password" type="password" class="input" id="password-login">
+            </div>
+            <p class="help is-small" id="passwordHelp">Must be at least 4 digits long.</p>
+        </div>
+
+        <div class="field">
+            <p class="has-text-centered">
+                <a href="/signup">Sign up here if you don't have an account.</a>
+            </p>
+        </div>
+
+        <div class="field">
+            <div class="control has-text-centered">
+                <button type="submit" class="button is-primary" id="login-btn">Log In</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="js/login.js"></script>
