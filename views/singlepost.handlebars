@@ -1,0 +1,30 @@
+<p class="column is-6 is-offset-3 mb-5">Please log in to leave comments.</p>
+<div class="card column is-6 is-offset-3 mb-5">
+    <div class="card-header">
+        <h5 class="card-header-title">{{post.title}}</h5>
+        <h6 class="card-header-subtitle is-size-7 is-pulled-right">
+            Posted by {{post.user.username}} on {{formatDate post.created_at}}
+        </h6>
+    </div>  
+    <div class="card-content">  
+        <p class="content">{{post.content}}</p>
+    </div>
+    <div class="card-content comment">
+        {{> commentcard post.comments}}
+    </div>
+</div> 
+
+<input type="hidden" name="post-id" value="{{post.id}}"/>
+
+{{#if loggedIn}}
+<div class="card column is-6 is-offset-3">
+    <div class="card-header"></div>
+    <form class="card-content comment-form">
+        <p class="label">Leave Comment:</p>
+        <textarea class="textarea" id="comment" name="comment-body"></textarea>
+        <button type="submit" class="button is-primary">Submit Comment</button>
+    </form>
+</div>
+{{/if}}
+
+<script src="/js/comment.js"></script>
