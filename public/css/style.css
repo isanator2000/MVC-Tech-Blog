@@ -1,7 +1,7 @@
 :root {
-    --primary: #f8edeb;
-    --secondary: #c9ada7;
-    --dark: #450920;
+    --primary: hsl(171, 100%, 41%);
+    --secondary: hsl(150, 50%, 40%);
+    --dark: hsl(200, 20%, 10%);
     --border-radius: 0.3rem;
   }
   
@@ -80,3 +80,4 @@
   .icon {
     margin-right: 0.5rem;
   }
+  
