@@ -43,7 +43,7 @@ try {
 }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', ensureAuth, async (req, res) => {
 try {
     const dbCommentData = await Comment.destroy({
     where: {id: req.params.id},
