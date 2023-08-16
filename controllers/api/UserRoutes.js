@@ -3,7 +3,7 @@ const router = express.Router();
 const {User} = require('../../models');
 const ensureAuth = require('../../utils/auth');
 
-router.post('/register', async (req, res) => {
+router.post('/signup', async (req, res) => {
     try {
         const newUser = await User.create(req.body);
         req.session.save(() => {
