@@ -11,6 +11,7 @@ https://thawing-citadel-91506-ea6bf6cf1e91.herokuapp.com/
 
 ## Credits
 
+Used snippet of code on helpers.js file 
 
 
 
