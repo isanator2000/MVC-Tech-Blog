@@ -8,7 +8,7 @@ const signupFormHandler = async (event) => {
   const password = passwordInput.value.trim();
 
   try {
-      const response = await fetch('/api/user', {
+      const response = await fetch('/api/user/signup', {
           method: 'POST',
           body: JSON.stringify({
               username,
