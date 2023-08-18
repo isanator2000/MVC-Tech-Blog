@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-router.post('/logout', ensureAuth, async (req, res) => {
+router.post('/logout', async (req, res) => {
     try {
         if (req.session.isLoggedIn) {
             await req.session.destroy();
