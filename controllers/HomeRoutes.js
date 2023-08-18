@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 
         res.render('homepage', 
             { posts, 
-            loggedIn: req.session.loggedIn, 
+            loggedIn: req.session.isloggedIn, 
             username: req.session.username,
             userId: req.session.userId });
     } catch (err) {
@@ -58,7 +58,7 @@ router.get('/post/:id', async (req, res) => {
         
         if (dbPostData) {
             const post = dbPostData.get({ plain: true });
-            res.render('single-post', { post, loggedIn: req.session.loggedIn, username: req.session.username });
+            res.render('single-post', { post, loggedIn: req.session.isloggedIn, username: req.session.username });
         } else {
             res.status(404).json({ message: "This id has no post."});
         }
@@ -68,7 +68,7 @@ router.get('/post/:id', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
+    if (req.session.isloggedIn) {
         res.redirect('/');
     } else {
         res.render('login');
